@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Farinha de Barata</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="content">
+      <div class="container">
+        <header>
+          <h1>Pizzaria Farinha de Barata</h1>
+          <p>Selecione o tamanho do item que deseja pedir</p>
+        </header>
+        <section>
+          <table id="pizza">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Sabor</th>
+                <th>Pequena</th>
+                <th>Média</th>
+                <th>Grande</th>
+                <th>Família</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="Mussarela">
+                <td class="imagem">
+                  <img src="./imagens/pizzas/mussarela.jpg" alt="Mussarela" />
+                </td>
+                <td>Mussarela</td>
+                <td class="option">R$ 10</td>
+                <td class="option">R$ 15</td>
+                <td class="option">R$ 20</td>
+                <td class="option">R$ 25</td>
+              </tr>
+              <tr id="Berinjela">
+                <td class="imagem">
+                  <img src="./imagens/pizzas/berinjela.jpg" alt="Berinjela" />
+                </td>
+                <td>Berinjela</td>
+                <td class="option">R$ 10</td>
+                <td class="option">R$ 15</td>
+                <td class="option">R$ 20</td>
+                <td class="option">R$ 25</td>
+              </tr>
+              <tr id="Camarão">
+                <td class="imagem">
+                  <img src="./imagens/pizzas/camarao.jpg" alt="Camarão" />
+                </td>
+                <td>Camarão</td>
+                <td class="option">R$ 10</td>
+                <td class="option">R$ 15</td>
+                <td class="option">R$ 20</td>
+                <td class="option">R$ 25</td>
+              </tr>
+              <tr id="Lombinho">
+                <td class="imagem">
+                  <img src="./imagens/pizzas/lombinho.jpg" alt="Lombinho" />
+                </td>
+                <td>Lombinho</td>
+                <td class="option">R$ 10</td>
+                <td class="option">R$ 15</td>
+                <td class="option">R$ 20</td>
+                <td class="option">R$ 25</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <table id="bebida">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Bebida</th>
+                <th>300mL</th>
+                <th>700mL</th>
+                <th>Litrão</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="Coca-Cola">
+                <td class="imagem">
+                  <img src="./imagens/bebidas/coca-cola.png" alt="Coca" />
+                </td>
+                <td>Coca-Cola</td>
+                <td class="option">R$ 5</td>
+                <td class="option">R$ 8</td>
+                <td class="option">R$ 10</td>
+              </tr>
+              <tr id="Patagônia">
+                <td class="imagem">
+                  <img src="./imagens/bebidas/patagonia.jpg" alt="Patagônia" />
+                </td>
+                <td>Patagônia</td>
+                <td class="option">R$ 5</td>
+                <td class="option">R$ 8</td>
+                <td class="option">R$ 10</td>
+              </tr>
+              <tr id="Sukita">
+                <td class="imagem">
+                  <img src="./imagens/bebidas/sukita.jpg" alt="Sukita" />
+                </td>
+                <td>Sukita</td>
+                <td class="option">R$ 5</td>
+                <td class="option">R$ 8</td>
+                <td class="option">R$ 10</td>
+              </tr>
+              <tr id="Ypióca">
+                <td class="imagem">
+                  <img src="./imagens/bebidas/ypioca.jpg" alt="Ypioca" />
+                </td>
+                <td>Ypióca</td>
+                <td class="option">R$ 5</td>
+                <td class="option">R$ 8</td>
+                <td class="option">R$ 10</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <div class="container2">
+        <section>
+          <form>
+            <label
+              >Nome
+              <input
+                id="nome"
+                type="text"
+                placeholder="Digite seu nome"
+                onchange="updateCliente(value, 'nome')"
+              />
+            </label>
+            <label
+              >Endereço
+              <input
+                id="endereco"
+                type="text"
+                placeholder="Seu endereço"
+                onchange="updateCliente(value, 'endereco')"
+              />
+            </label>
+            <label
+              >Número de telefone
+              <input
+                id="telefone"
+                type="tel"
+                placeholder="(xx)xxxxx-xxxx"
+                onchange="updateCliente(value, 'telefone')"
+              />
+            </label>
+            <div class="resumoPedido">
+              <div class="conteudoResumo"></div>
+            </div>
+            <button type="button" onclick="montaResumo()">
+              Faça agora seu pedido
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
